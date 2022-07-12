@@ -23,7 +23,8 @@ end do
 do i=1,n
     do j=i,n
         R(i,j)=((4**j)*R(i,j-1)-R(i-1,j-1))/(4**j-1)
+        write(*,*)"i=",i,'j= ',j,"R(i,j)=",R(i,j)
     end do
 end do
-write(*,*)'La integral mediante el método de Romberg es',R(n,n)
+write(*,*)'La integral mediante el método de Romberg es',R(n-1,n-1)
 end program Romberg
